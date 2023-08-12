@@ -72,8 +72,8 @@ class LoginScreen extends StatelessWidget {
                         height: MediaQuery.of(context).size.height * 0.02,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Spacer(),
                           const Text("New to quiz app? "),
                           TextButton(
                               onPressed: () {},
@@ -135,10 +135,9 @@ class LoginScreen extends StatelessWidget {
                           color: Colors.black.withOpacity(0.4),
                         ),
                       ),
-                      Container(
-                          height: MediaQuery.of(context).size.height * 0.04),
+                      const Spacer(),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
                             children: [
@@ -149,26 +148,23 @@ class LoginScreen extends StatelessWidget {
                                     Colors.green[500]),
                               ),
                               const Text("Remember me"),
-                              SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.2),
-                              TextButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    "Forgot Password?",
-                                    style: GoogleFonts.roboto(
-                                        color: Colors.green[500],
-                                        fontWeight: FontWeight.bold),
-                                  )),
                             ],
                           ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "Forgot Password?",
+                                style: GoogleFonts.roboto(
+                                    color: Colors.green[500],
+                                    fontWeight: FontWeight.bold),
+                              )),
                         ],
                       ),
                     ],
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
