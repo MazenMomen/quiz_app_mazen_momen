@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_app_mazen_momen/screens/category_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -7,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[700],
+      backgroundColor: const Color.fromARGB(255, 61, 212, 184),
       body: SafeArea(
         child: Column(
           children: [
@@ -80,7 +81,8 @@ class LoginScreen extends StatelessWidget {
                               child: Text(
                                 "Register",
                                 style: GoogleFonts.roboto(
-                                  color: Colors.green[500],
+                                  color:
+                                      const Color.fromARGB(255, 61, 212, 184),
                                 ),
                               )),
                         ],
@@ -108,9 +110,18 @@ class LoginScreen extends StatelessWidget {
                               50), // Set button border radius
                         ),
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute<void>(
+                                builder: (BuildContext context) =>
+                                    const CategoryScreen(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green[500],
+                            backgroundColor:
+                                const Color.fromARGB(255, 61, 212, 184),
                           ),
                           child: Text(
                             "Login",
@@ -145,7 +156,7 @@ class LoginScreen extends StatelessWidget {
                                 value: true,
                                 onChanged: (value) {},
                                 fillColor: MaterialStateProperty.all(
-                                    Colors.green[500]),
+                                    const Color.fromARGB(255, 61, 212, 184)),
                               ),
                               const Text("Remember me"),
                             ],
@@ -155,7 +166,8 @@ class LoginScreen extends StatelessWidget {
                               child: Text(
                                 "Forgot Password?",
                                 style: GoogleFonts.roboto(
-                                    color: Colors.green[500],
+                                    color:
+                                        const Color.fromARGB(255, 61, 212, 184),
                                     fontWeight: FontWeight.bold),
                               )),
                         ],
