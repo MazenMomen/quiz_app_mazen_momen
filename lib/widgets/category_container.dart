@@ -6,7 +6,7 @@ class CategoryContainer extends StatelessWidget {
   final int index;
   CategoryContainer({super.key, required this.index});
 
-  List quizName = ["General Test", "Sports Test", "Math Test"];
+  List quizName = ["General Test", "Sports Test", "History Test"];
 
   @override
   Widget build(BuildContext context) {

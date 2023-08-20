@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app_mazen_momen/screens/login_screen.dart';
+import 'package:quiz_app_mazen_momen/screens/quiz_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 61, 212, 184)),
         useMaterial3: true,
       ),
-      home: LoginScreen(),
+      home: const QuizScreen(),
     );
   }
 }
