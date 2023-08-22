@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app_mazen_momen/screens/quiz_screen.dart';
+import 'package:quiz_app_mazen_momen/screens/opening_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 61, 212, 184)),
         useMaterial3: true,
       ),
-      home: const QuizScreen(),
+      home: const OpeningScreen(),
     );
   }
 }

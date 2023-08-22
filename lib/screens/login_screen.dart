@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_app_mazen_momen/global/quiz_data.dart';
 import 'package:quiz_app_mazen_momen/screens/category_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -77,6 +78,7 @@ class LoginScreen extends StatelessWidget {
                         width: MediaQuery.of(context).size.width,
                       ),
                       TextFormField(
+                          controller: userNameController,
                           validator: (value) {
                             if (value!.isEmpty) {
                               return "Please enter your username!!";
