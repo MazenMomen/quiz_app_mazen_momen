@@ -1,6 +1,5 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:quiz_app_mazen_momen/screens/login_screen.dart';
 
 class OpeningScreen extends StatelessWidget {
   const OpeningScreen({super.key});
@@ -8,10 +7,6 @@ class OpeningScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor:
-            Colors.black, // Set the app bar background color to black
-      ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -22,7 +17,7 @@ class OpeningScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
+          children: [
             const Spacer(),
             Padding(
               padding: const EdgeInsets.all(10.0),
@@ -46,34 +41,6 @@ class OpeningScreen extends StatelessWidget {
                   fontSize: 24),
             ),
             const Spacer(),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
-              width: MediaQuery.of(context).size.width,
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => LoginScreen(),
-                    ),
-                  );
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(
-                        5.0), // Make the button rectangle with rounded corners
-                  ),
-                ),
-                child: const Text(
-                  'Start',
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    color: Colors.white, // Change the text color to white
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),
