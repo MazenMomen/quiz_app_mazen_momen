@@ -82,10 +82,8 @@ class LoginScreen extends StatelessWidget {
                           validator: (value) {
                             if (value!.isEmpty) {
                               return "Please enter your username!!";
-                            } else if (value.length < 9) {
-                              return "Username must be at least 9 characters.";
-                            } else if (value[0] != value[0].toUpperCase()) {
-                              return "First letter must be uppercase";
+                            } else if (value.length < 5) {
+                              return "Username must be at least 5 characters.";
                             }
                             return null;
                           },
@@ -105,8 +103,8 @@ class LoginScreen extends StatelessWidget {
                           validator: (value) {
                             if (value!.isEmpty) {
                               return "Please enter your Password!!";
-                            } else if (value.length < 10) {
-                              return "Password must be at least 10 characters.";
+                            } else if (value.length < 8) {
+                              return "Password must be at least 8 characters.";
                             } else if (!RegExp(
                                     r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).*$')
                                 .hasMatch(value)) {
