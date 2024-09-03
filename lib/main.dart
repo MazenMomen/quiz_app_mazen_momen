@@ -4,6 +4,7 @@ import 'package:quiz_app_mazen_momen/screens/opening_screen.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: FutureBuilder(
       future: Future.delayed(const Duration(seconds: 3), () => "data"),
       builder: (context, snapshot) {

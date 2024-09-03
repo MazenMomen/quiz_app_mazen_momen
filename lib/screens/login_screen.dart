@@ -216,7 +216,7 @@ class LoginScreen extends StatelessWidget {
                               Checkbox(
                                 value: true,
                                 onChanged: (value) {},
-                                fillColor: MaterialStateProperty.all(
+                                fillColor: WidgetStateProperty.all(
                                     const Color.fromARGB(255, 61, 212, 184)),
                               ),
                               const Text("Remember me"),
